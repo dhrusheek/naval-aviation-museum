@@ -11,8 +11,6 @@ body, html {
     box-sizing: border-box;
 }
 
-
-
 #Header {
     width: 100%;
     display: flex;
@@ -22,7 +20,7 @@ body, html {
     background-color: black;
     justify-content: center;
 }
-.namlogo{
+.namlogo {
     height: 75px;
     width: 150px;
 }
@@ -47,10 +45,7 @@ body, html {
 }
 
 .headerr {
-    padding-top: 0.7rem;
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-bottom: 0.7rem;
+    padding: 0.7rem 25px;
     justify-content: space-evenly;
     max-height: 5%;
     display: flex;
@@ -59,16 +54,12 @@ body, html {
     width: 100%;
     background-color: rgb(0, 0, 0);
     color: antiquewhite;
-    text-overflow: hidden;
-    overflow: hidden;
-    overflow-x: hidden;
-    overflow-y: hidden;
     transition: 0.2s ease-in-out;
 }
 
 .headerr a {
     text-decoration: none;
-    margin-right: 0rem;
+    margin-right: 0;
     color: rgb(255, 255, 255);
 }
 
@@ -78,14 +69,12 @@ body, html {
 }
 
 .headerr.scrolled {
-    padding-top: 20px;
+    padding: 20px 0;
     height: 8%;
-    padding-bottom: 20px;
     background-color: #ffffff;
     color: black;
     position: fixed;
     top: 0;
-    overflow-wrap: normal;
     box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.5);
     z-index: 1000;
 }
@@ -117,111 +106,170 @@ body, html {
     font-style: normal;
 }
 
-#info{
+#info {
     margin-top: -21px;
     text-align: center;
-
-
     background-color: aliceblue;
     width: 100%;
 }
 
-
-#peopleline{
+#peopleline {
     display: flex;
     gap: 20px;
     justify-content: space-evenly;
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-bottom: 30px;
-    
-
-    
-
+    padding: 0 25px 30px;
 }
 
-#imagewithtext{
-  justify-items: center;
-  height: 400px;
-  width: 400px;
-  background-color: aliceblue;
-  overflow: hidden;
-  border: 2px solid rgb(206, 206, 206);
-  align-content: center;
-  text-align: center;
-  
-
-    
-
+#imagewithtext {
+    justify-items: center;
+    height: 400px;
+    width: 400px;
+    background-color: aliceblue;
+    overflow: hidden;
+    border: 2px solid rgb(206, 206, 206);
+    text-align: center;
 }
 
-#imagewithtext img{
+#imagewithtext img {
     border-radius: 50%;
-    max-height: 300px;
-    max-width: 300px;
-
+    width: 20vw;  /* 20% of the viewport width */
+    height: 20vw; /* Ensures the image is a square */
+    max-width: 300px; /* Maximum size limit */
+    max-height: 300px; /* Maximum size limit */
+    min-width: 100px;  /* Minimum size limit */
+    min-height: 100px; /* Minimum size limit */
 }
 
-#musuem-cont{
+
+#musuem-cont {
     padding-bottom: 20px;
 }
-#musuem{
+
+#musuem {
     display: flex;
     background-color: #ffffff;
     width: 100%;
-    
 }
 
-#musuemimage{
+#musuemimage {
     overflow: hidden;
     width: 400%;
     height: 100%;
     object-fit: cover;
-    padding-top: 50px;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding: 50px 25px 0;
     justify-content: center;
     align-content: center;
-    
-    
 }
 
-#musuemimage img{
-    max-width: 100%;
+#musuemimage img {
     max-width: 100%;
 }
 
+#footer {
+    display: flex;
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+    padding-bottom: 5rem;
+}
+
+.navylogo {
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: cover;
+}
+
+.navyLogo {
+    height: 100px;
+    width: 100px;
+}
+
+#footercontent h1 {
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+}
+
+#footercontent h3 {
+    margin: 0;
+    padding: 0;
+    color: blanchedalmond;
+    float: right;
+    padding-right: 10%;
+}
+
+#footercontent p {
+    color: #ffffff;
+}
+
+
+@media (max-width: 768px) {
+    .headerr {
+        flex-direction: row;
+        text-align: center;
+    }
+    
+
+    
+    #peopleline {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    #musuem{
+        flex-direction: column;
+    }
+    
+    #imagewithtext {
+        height: 100%;
+        width: 90%;
+    }
+    
+    #musuemimage {
+        width: 100%;
+    }
+
+    #ticket {
+        max-inline-size: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    
+    .headerr {
+        padding: 1rem;
+        max-height: auto;
+        margin-bottom: 0;
+    }
+
+    #Header {
+        height: auto;
+        padding: 10px;
+    }
+
+    #heading {
+        font-size: 1.5rem;
+    }
+
+    
+    #imagewithtext {
+        width: 100%;
+    }
+    #musuem{
+        flex-direction: column;
+    }
+    
+    #musuemimage {
+        width: 100%;
+        padding: 10px;
+    }
+    
     #footer {
-        display: flex;
-        background-color: rgb(0, 0, 0);
-        padding: 20px;
-        padding-bottom: 5rem;
-    }
-    .navylogo{
-        max-width: 100px;
-        max-height: 100px;
-        object-fit: cover;
-    }
-    
-    .navyLogo{
-        height: 100px;
-        width: 100px;
-    }
-    #footercontent h1 {
-        margin: 0;
-        padding: 0;
-        color: #ffffff;
+        flex-direction: column;
+        align-items: center;
     }
     
     #footercontent h3 {
-        margin: 0;
-        padding: 0;
-        color: blanchedalmond;
-        float: right;
-        padding-right: 10%;
-    }
-    
-    #footercontent p {
-        color: #ffffff;
+        padding-right: 0;
     }
 }

@@ -329,6 +329,11 @@ body, html {
 
     #Header {
         height: auto;
+        padding: 10px;
+    }
+
+    #heading {
+        font-size: 1.5rem;
     }
 
 
