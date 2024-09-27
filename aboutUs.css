@@ -19,8 +19,11 @@ body, html {
     color: aliceblue;
     background-color: black;
     justify-content: center;
+    
+
 }
-.namlogo {
+
+.namlogo{
     height: 75px;
     width: 150px;
 }
@@ -36,16 +39,21 @@ body, html {
 }
 
 #NavBar-container {
-    padding: 0;
-    margin: 0;
+
+padding: 0;
+margin: 0;
 }
 
-.headcon {
+.headcon{
     background-color: black;
 }
 
-.headerr {
-    padding: 0.7rem 25px;
+header {
+    padding-top: 0.7rem;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 0.7rem;
+
     justify-content: space-evenly;
     max-height: 5%;
     display: flex;
@@ -53,37 +61,51 @@ body, html {
     align-items: center;
     width: 100%;
     background-color: rgb(0, 0, 0);
+    
+
+    
     color: antiquewhite;
+    text-overflow: hidden;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
     transition: 0.2s ease-in-out;
+    
 }
 
-.headerr a {
+header a {
     text-decoration: none;
-    margin-right: 0;
+    margin-right: 0rem;
     color: rgb(255, 255, 255);
 }
 
-.headerr a:hover {
-    color: greenyellow;
-    text-shadow: 0px 0px 3px white;
+header a:hover {
+color: greenyellow;
+text-shadow: 0px 0px 3px white ;
+    
 }
 
-.headerr.scrolled {
-    padding: 20px 0;
-    height: 8%;
+header.scrolled{
+    padding-top: 20px;
+        height: 8%;
+        padding-bottom:20px ;
     background-color: #ffffff;
     color: black;
     position: fixed;
     top: 0;
-    box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.5);
+    overflow-wrap: normal;
+    box-shadow: 0px 4px 6px -1px rgba(0,0,0,0.5);
     z-index: 1000;
+
 }
 
-.headerr.scrolled a {
+header.scrolled a{
     color: black;
 }
 
+
 #ticket {
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -146,6 +168,8 @@ body, html {
 }
 
 #musuem {
+    font-size: 20px;
+    padding: 10px;
     display: flex;
     background-color: #ffffff;
     width: 100%;
@@ -203,9 +227,37 @@ body, html {
 
 
 @media (max-width: 768px) {
-    .headerr {
-        flex-direction: row;
-        text-align: center;
+    #Header {
+        height: auto;
+       
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    #heading {
+        font-size: 1.5rem;
+    }
+
+    header {
+        margin-top: -20px;
+        display: flex;
+        justify-content: space-evenly;
+        
+        height: 5%;
+        text-wrap: balance;
+    }
+
+    header a {
+        
+        font-size: calc(1vw + 1vh);
+        
+    }
+
+    header.scrolled{
+        padding-top:10px;
+        padding: 20px;
+        padding-bottom:5px ;
     }
     
 
@@ -217,6 +269,7 @@ body, html {
     }
     #musuem{
         flex-direction: column;
+        font-size: 3vw;
     }
     
     #imagewithtext {
@@ -233,43 +286,3 @@ body, html {
     }
 }
 
-@media (max-width: 480px) {
-
-    
-    .headerr {
-        padding: 1rem;
-        max-height: auto;
-        margin-bottom: 0;
-    }
-
-    #Header {
-        height: auto;
-        padding: 10px;
-    }
-
-    #heading {
-        font-size: 1.5rem;
-    }
-
-    
-    #imagewithtext {
-        width: 100%;
-    }
-    #musuem{
-        flex-direction: column;
-    }
-    
-    #musuemimage {
-        width: 100%;
-        padding: 10px;
-    }
-    
-    #footer {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    #footercontent h3 {
-        padding-right: 0;
-    }
-}

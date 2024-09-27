@@ -1,7 +1,7 @@
 var i =0;
 var images=[];
-images[0]="cafe.jpg";
-images[1]="harr.JPG";
+images[1]="cafe.jpg";
+images[0]="harr.JPG";
 images[2]="ships.JPG";
 images[3]="view.jpg";
 images[4]="Naval-Aviation-Museum-goa5-1.jpg";
