@@ -517,6 +517,11 @@ header.scrolled a{
         text-wrap: balance;
     }
 
+    #blank{
+        height: 600px;
+        justify-content: center;
+       }
+
     header a {
         
         font-size: calc(1vw + 1vh);
