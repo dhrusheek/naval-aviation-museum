@@ -18,10 +18,15 @@ body, html {
 }
 
 #Header {
+
+   
+
     width: 100%;
+    background-color: black;
+
     display: flex;
     text-align: center;
-    height: 12%;
+    height: 200%;
     color: aliceblue;
     background-color: black;
     justify-content: center;
@@ -29,6 +34,12 @@ body, html {
     margin:0;
     
 
+}
+
+#Header img{
+    
+    background-color: black;
+    
 }
 
 .namlogo{
@@ -100,7 +111,7 @@ header.scrolled{
     padding-top: 20px;
         height: 8%;
         padding-bottom:20px ;
-    background-color: #ffffff;
+    background-color: #000000b9;
     color: black;
     position: fixed;
     top: 0;
@@ -111,7 +122,7 @@ header.scrolled{
 }
 
 header.scrolled a{
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 
@@ -168,11 +179,12 @@ header.scrolled a{
 #curators{
     padding: 20px;
  align-self: center;
- background: linear-gradient(to right, rgba(255, 89, 0, 0.406), rgba(255, 0, 191, 0.272));
+ background: linear-gradient(to right, rgba(0, 11, 165, 0.29), rgba(0, 0, 0, 0.485));
 }
 
 #curators H1{
-    font-size: 3vw;
+    font-size: calc(2vw + 2vh);
+    color: #ffffff;
     align-self: center;
     justify-content: center;
     display: flex;
@@ -301,6 +313,29 @@ header.scrolled a{
     width: 100px;
 }
 
+#feedback{
+    
+    height: 75vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-top: 105px;
+
+
+}
+
+#feedback a{
+
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10%;
+    background-color: black;
+    text-decoration: none;
+    font-size: 3vw;
+}
+
 @media (max-width: 768px) {
     #Header {
         height: auto;
@@ -372,6 +407,11 @@ header.scrolled a{
 
         height: 200px;
         width: 200px;
+    }
+
+    #feedback{
+
+        margin-top: 100px;
     }
    
 
