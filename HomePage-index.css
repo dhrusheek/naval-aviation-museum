@@ -148,6 +148,7 @@ header.scrolled a{
 }
 
 #blank{
+    text-align: center;
    height: 50vw;
    align-content: center;
    padding: 0;
@@ -673,7 +674,7 @@ header.scrolled a{
         margin-top: -200px;
         margin: 0;
         padding: 0;
-        height: 900px;
+        height: 80vh;
         justify-content: center;
         
        }
@@ -688,6 +689,7 @@ header.scrolled a{
         font-size: 20px;
         padding: 0;
         margin: 0;
+        text-align: center;
     }
 
     #blank h4{
