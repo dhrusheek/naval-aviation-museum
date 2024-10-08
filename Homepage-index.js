@@ -32,6 +32,13 @@ function goPrev() {
     }
 }
 
+function scrollto() {
+    window.scrollTo({
+        top: 750,
+        behavior: 'smooth'
+    });
+}
+
 document.addEventListener('scroll', () => {
     const header = document.querySelector('header');
     if (window.scrollY > 100) {

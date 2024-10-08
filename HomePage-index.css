@@ -15,6 +15,10 @@ body, html {
     box-sizing: border-box;
 }
 
+a{
+    text-decoration: none;
+}
+
 #Header {
     width: 100%;
     display: flex;
@@ -393,6 +397,146 @@ header.scrolled a{
 }
 
 
+.btn {
+    
+    margin: 0;
+    padding: 0px ;
+    border: none;
+    outline: none;
+    color: #FFF;
+    cursor: pointer;
+    position:fixed;
+    display: flex;
+    bottom: 0;
+
+    width: 200px;
+    height: 50px;
+
+
+    justify-content: center;
+    align-content: center;
+
+    z-index: 10000;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    align-self: center;
+    text-align: center;
+    
+  }
+  .btn::after {
+    text-align: center;
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #11212D;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+  /* glow */
+  .btn::before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #FF0000, #FF7300, #FFFB00, #48FF00,
+      #00FFD5, #002BFF, #FF00C8, #FF0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height:  calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+  }
+  
+  @keyframes glowing {
+    0% {background-position: 0 0;}
+    50% {background-position: 400% 0;}
+    100% {background-position: 0 0;}
+  }
+  
+  /* hover */
+  .btn::before {
+    opacity: 1;
+  }
+  
+  .btn:active:after {
+    background: transparent;
+  }
+  
+  .btn:active {
+    color: #000;
+    font-weight: bold;
+  }
+
+.btn h5{
+    
+    margin: 0; /* 기본 마진 제거 */
+    display: flex;
+    justify-content: center; /* 수평 중앙 정렬 */
+    text-align: center;
+    padding: 0;
+    margin-top: -2px;
+ 
+}
+
+.btn button {
+    background: none;
+    border: none;
+    
+    padding: 15px;
+    width: 100%;
+    border-radius: 10px;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    text-align: left;
+    cursor: pointer;
+}
+
+.btn a{
+    text-decoration: none;
+    color: white;
+}
+
+#blank button{
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    text-align: left;
+    cursor: pointer;
+}
+
+#iconsc{
+    padding-top: 42px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    
+}
+
+#iconsc button i{
+    justify-self: center;
+    align-self: center;
+}
+
+#iconsc i{
+    padding-left: 35%;
+    font-size: 30px;
+}
+
 
 .productimg{
     width: 100%;
@@ -526,10 +670,39 @@ header.scrolled a{
     }
 
     #blank{
-        height: 600px;
+        margin-top: -200px;
+        margin: 0;
+        padding: 0;
+        height: 900px;
         justify-content: center;
+        
        }
 
+    #blank h1{
+        padding: 0;
+        margin: 0;
+        font-size: 50px;
+        text-align: center;
+    }
+    #blank h5{
+        font-size: 20px;
+        padding: 0;
+        margin: 0;
+    }
+
+    #blank h4{
+       
+        
+        font-size: 30px;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+
+    #iconsc{
+        margin: 0;
+        padding: 0;
+    }
     header a {
         
         font-size: calc(1vw + 1vh);
