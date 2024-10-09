@@ -270,7 +270,7 @@ header.scrolled a{
 }
 
 #manifest p{
-    font-size: 14px;
+    font-size: 18px;
     padding-bottom: 50px;
 }
 
@@ -317,14 +317,29 @@ header.scrolled a{
 
 #feedback{
     
-    height: 75vh;
+    height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-content: center;
     align-items: center;
-    margin-top: 105px;
+    
 
+
+}
+
+#contactus{
+
+    padding: 50px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items:flex-end
+}
+
+#cuemail{
+    padding: 30px 0;
 
 }
 
