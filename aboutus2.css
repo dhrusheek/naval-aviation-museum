@@ -334,12 +334,12 @@ header.scrolled a{
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
-    justify-content: left;
-    align-items:flex-end
+
 }
 
 #cuemail{
     padding: 30px 0;
+    
 
 }
 
@@ -429,6 +429,18 @@ header.scrolled a{
     #feedback{
 
         margin-top: 100px;
+    }
+
+    #manifest{
+        font-size: 14px;
+    }
+
+    #manifest p{
+        font-size: 13px;
+    }
+
+    #contactus p{
+        font-size: 13px;
     }
    
 
