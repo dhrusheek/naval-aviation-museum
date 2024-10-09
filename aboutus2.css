@@ -273,6 +273,8 @@ header.scrolled a{
 #manifest p{
     font-size: 18px;
     padding-bottom: 50px;
+    justify-content: center;
+    text-align: center;
 }
 
 
