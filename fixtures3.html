@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Gallery - Naval Aviation Museum Goa</title>
+    <link rel="shortcut icon" type="x-icon" href="navynamlogo (2).png">
+    <link rel="stylesheet" type="text/css" href="aboutus2.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Playwrite+BE+VLG:wght@100..400&display=swap');
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            background-image: url(harr.JPG);
+            background-attachment: fixed;
+            font-family: "Manrope", sans-serif;
+        }
+
+        .gallery-container {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: rgba(0, 0, 0, 0.388);
+        }
+
+        #galinfo h1 {
+            align-self: center;
+            font-size: 3.5vw;
+            margin: 0;
+            padding: 0;
+        }
+
+        #galinfo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to right, rgba(0, 11, 165, 0.29), rgba(0, 0, 0, 0.485));
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+        }
+
+        .gallery img {
+            object-fit: cover;
+            cursor: pointer;
+            width: 300px;
+            height: 300px;
+            margin: 15px;
+            transition: transform 0.2s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Lightbox CSS */
+        #lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        #lightbox img {
+            max-width: 80%;
+            max-height: 80%;
+            margin: 0 auto;
+            display: block;
+        }
+
+        #lightbox .close-btn, #lightbox .prev-btn, #lightbox .next-btn {
+            position: absolute;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        #lightbox .close-btn {
+            top: 10px;
+            right: 20px;
+        }
+
+        #lightbox .prev-btn {
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        #lightbox .next-btn {
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        /* Image count */
+        #lightbox .image-count {
+            position: absolute;
+            bottom: 20px;
+            color: white;
+            font-size: 18px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lightbox Gallery</title>
+</head>
+<body>
+
+    <div id="Header">
+        <img class="namlogo" src="NAM.JPG" alt="">
+        <header>
+            <a href="index.html">Home</a>
+            <a href="aboutus2.html">About us</a>
+            <a href="fixtures3.html">Gallery</a>
+            <a href="feedback.html">Feedback</a>
+        </header>
+    </div>
+
+    <div id="galinfo"><h1>Gallery</h1></div>
+
+    <div class="gallery-container">
+        <div class="gallery">
+            <!-- =========================================================
+                 Existing images (older indexes)
+                 ========================================================= -->
+            <img src="harr.JPG" alt="Sea Harrier" data-info="The Sea Harrier, a renowned aircraft in the Indian Navy...">
+            <img src="vr.jpg" alt="Virtual Reality Corner" data-info="The virtual reality corner offers an 'Out of this world experience'...">
+            <img src="plane.JPG" alt="Sea Hawk" data-info="The Sea Hawk, a prominent aircraft in the Indian Navy..." loading="lazy">
+            <img src="ht-2.JPG" alt="HT-2" data-info="The HT-2, India's first indigenously designed aircraft..." loading="lazy">
+            <img src="hughes.JPG" alt="Hughes" data-info="The Hughes aircraft played a significant role in the history of helicopter aviation in India..." loading="lazy">
+            <img src="cafe.jpg" alt="" loading="lazy">
+            <img src="cafeout.jpg" alt="" loading="lazy">
+            <img src="islander.JPG" alt="" loading="lazy">
+            <img src="seaKing.JPG" alt="" loading="lazy">
+            <img src="superConstellation.JPG" alt="" loading="lazy">
+            <img src="gallery (1).jpg" alt="" loading="lazy">
+            <img src="gallery (2).jpg" alt="" loading="lazy">
+            <img src="gallery (3).jpg" alt="" loading="lazy">
+            <img src="gallery (4).jpg" alt="" loading="lazy">
+            <img src="gallery (2).webp" alt="" loading="lazy">
+            <img src="gallery (3).webp" alt="" loading="lazy">
+            <img src="boards1.JPG" alt="" loading="lazy">
+            <img src="IMG-20241009-WA0017.jpg" alt="" loading="lazy">
+            <img src="IMG-20241009-WA0018.jpg" alt="" loading="lazy">
+            <img src="IMG-20241009-WA0019.jpg" alt="" loading="lazy">
+            <img src="IMG-20241009-WA0020.jpg" alt="" loading="lazy">
+            <img src="IMG-20241009-WA0021.jpg" alt="" loading="lazy">
+            <img src="IMG-20241009-WA0023.jpg" alt="" loading="lazy">
+            <img src="IMG-20241009-WA0024.jpg" alt="" loading="lazy">
+            <img src="IMG-20241009-WA0025.jpg" alt="" loading="lazy">
+            <img src="IMG-20241009-WA0026.jpg" alt="" loading="lazy">
+            <img src="IMG-20241009-WA0027.jpg" alt="" loading="lazy">
+            <img src="IMG-20241009-WA0028.jpg" alt="" loading="lazy">
+            <img src="IMG-20241009-WA0030.jpg" alt="" loading="lazy">
+            <img src="IMG-20241009-WA0031.jpg" alt="" loading="lazy">
+            <img src="IMG-20241009-WA0032.jpg" alt="" loading="lazy">
+            <img src="IMG-20241009-WA0036.jpg" alt="" loading="lazy">
+            <img src="IMG-20241009-WA0037.jpg" alt="" loading="lazy">
+            <img src="IMG-20241009-WA0042.jpg" alt="" loading="lazy">
+            <img src="IMG-20241009-WA0044.jpg" alt="" loading="lazy">
+            <img src="IMG-20241009-WA0045.jpg" alt="" loading="lazy">
+            <img src="IMG-20241009-WA0046.jpg" alt="" loading="lazy">
+
+
+            <!-- =========================================================
+                 ALL NEW IMAGES (from your screenshots)
+                 ========================================================= -->
+            <!-- First screenshot set (ADHVAN, ADWITYA, etc.) -->
+            <img src="ADHVAN 1.jpg" alt="ADHVAN 1" loading="lazy">
+            <img src="ADHVAN 2.jpg" alt="ADHVAN 2" loading="lazy">
+            <img src="ADHVAN 3.jpg" alt="ADHVAN 3" loading="lazy">
+            <img src="ADWITIYA 1.jpg" alt="ADWITYA 1" loading="lazy">
+            <img src="ADWITIYA 2.jpg" alt="ADWITYA 2" loading="lazy">
+            <img src="ATC.jpg" alt="ATC" loading="lazy">
+            <img src="ATMANIRBHAR.jpg" alt="ATMANIRBHAR" loading="lazy">
+            <img src="BUILDING EXIT.jpg" alt="BAE SEA HARRIER" loading="lazy">
+            <img src="BREGUET ALIZE.jpg" alt="BREGUET ALIZE" loading="lazy">
+            <img src="BRITTEN NORMAN ISLANDER.jpg" alt="BRITTEN NORMAN ISLANDER" loading="lazy">8
+            <img src="CAFE COUNTER.jpg" alt="CAFE COUNTER" loading="lazy">
+            <img src="COCKPIT CAFE.jpg" alt="COCKPIT CAFE" loading="lazy">
+
+            <!-- Updated DJI numbering (based on your screenshot) -->
+            <img src="DJI_0023.jpg" alt="DJI_0023" loading="lazy">
+            <img src="DJI_0025.jpg" alt="DJI_0025" loading="lazy">
+            <img src="DJI_0027.jpg" alt="DJI_0027" loading="lazy">
+            <img src="DJI_0029.jpg" alt="DJI_0029" loading="lazy">
+            <img src="DJI_0040.jpg" alt="DJI_0040" loading="lazy">
+            <img src="DJI_0042.jpg" alt="DJI_0042" loading="lazy">
+            <img src="DJI_0050.jpg" alt="DJI_0050" loading="lazy">
+            <img src="DJI_0051.jpg" alt="DJI_0051" loading="lazy">
+            <img src="DJI_0053.jpg" alt="DJI_0053" loading="lazy">
+            <img src="DJI_0057.jpg" alt="DJI_0057" loading="lazy">
+
+            <!-- Second screenshot set -->
+            <img src="FAIREY FIREFLY 2.jpg" alt="FAIREY FIREFLY 2" loading="lazy">
+            <img src="FAIREY FIREFLY.jpg" alt="FAIREY FIREFLY" loading="lazy">
+            <img src="GTD 3M ROTATING.jpg" alt="">
+            <img src="GOA LIBERATION WALL.jpg" alt="GOA LIBERATION WALL" loading="lazy">
+            <img src="HAL HT2.jpg" alt="HAL HT2" loading="lazy">
+            <img src="HAWKER SIDDELEY SEAHAWK.jpg" alt="HAWKER SIDDELEY SEAHAWK" loading="lazy">
+            <img src="HUGHES 300.jpg" alt="HUGHES 300" loading="lazy">
+            <img src="LEGENDS WALL.jpg" alt="LEGENDS WALL" loading="lazy">
+            <img src="NAM PROPELLER.jpg" alt="NAM PROFILE" loading="lazy">
+            <img src="PEGASUS IN ENGINE BAY.jpg" alt="PEGASUS IN ENGINE BAY" loading="lazy">
+            <img src="PILOT.jpg" alt="PILOT" loading="lazy">
+            <img src="ROLLS ROYCE PEGASUS.jpg" alt="RAMP" loading="lazy">
+            <img src="SASHAKT 1.jpg" alt="SASHKAT 1" loading="lazy">
+            <img src="SASHAKT 2.jpg" alt="SASHKAT 2" loading="lazy">
+            <img src="SASHAKT 3.jpg" alt="SASHKAT 3" loading="lazy">
+            <img src="SASHAKT 4.jpg" alt="SASHKAT 4" loading="lazy">
+            <img src="SELFIE POINT.jpg" alt="SHORT SEALAND 2" loading="lazy">
+            <img src="SHORT SEALAND.jpg" alt="SHORT SEALAND 2" loading="lazy">
+            <img src="SHORT SEALAND 2.jpg" alt="SHORT SEALAND 2" loading="lazy">
+            <img src="SOUVENIR SHOP.jpg" alt="SOUVENIR SHOP" loading="lazy">
+            <img src="SOUVENIRS 1.jpg" alt="SHORT SEALAND 2" loading="lazy">
+            <img src="SOUVENIRS 2.jpg" alt="SHORT SEALAND 2" loading="lazy">
+            <img src="STUTI ROOM.jpg" alt="SOUTH ROOM" loading="lazy">
+            <img src="TECH ROOM.jpg" alt="TECH ROOM" loading="lazy">
+            <img src="TORPEDOS.jpg" alt="TORPEDOS" loading="lazy">
+            <img src="TURBOMECA ARTOUSTE.jpg" alt="TURBOMECA ARTOUSTE" loading="lazy">
+            <img src="TURBOPROP.jpg" alt="TURBOPROP" loading="lazy">
+            <img src="VIMAAN 1.jpg" alt="VIMANA 1" loading="lazy">
+            <img src="VIMAAN 2.jpg" alt="VIMANA 2" loading="lazy">
+            <img src="VR CORNER.jpg" alt="VR CORNER" loading="lazy">
+            <img src="WAITING SHED.jpg" alt="WAITING SHED" loading="lazy">
+            <img src="WESTLAND SEAKING MK 42.jpg" alt="WESTLAND SEAKING MK 42" loading="lazy">
+
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox">
+        <span class="close-btn">&times;</span>
+        <span class="prev-btn">&#10094;</span>
+        <span class="next-btn">&#10095;</span>
+        <img id="lightbox-img" src="" alt="">
+        <div class="image-count" id="image-count"></div>
+    </div>
+
+    <script>
+        const galleryImages = document.querySelectorAll('.gallery img');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.querySelector('.close-btn');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+        const imageCount = document.getElementById('image-count');
+        let currentIndex = 0;
+
+        // Show lightbox when an image is clicked
+        galleryImages.forEach((img, index) => {
+            img.addEventListener('click', () => {
+                lightbox.style.display = 'flex';
+                lightboxImg.src = img.src;
+                currentIndex = index;
+                updateImageCount();
+            });
+        });
+
+        // Close lightbox
+        closeBtn.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+
+        // Show next image
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % galleryImages.length;
+            lightboxImg.src = galleryImages[currentIndex].src;
+            updateImageCount();
+        });
+
+        // Show previous image
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+            lightboxImg.src = galleryImages[currentIndex].src;
+            updateImageCount();
+        });
+
+        // Update image count display
+        function updateImageCount() {
+            imageCount.textContent = `${currentIndex + 1} of ${galleryImages.length}`;
+        }
+
+        // Optional: Add a scroll-based header style change
+        document.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+
+</body>
+</html>
