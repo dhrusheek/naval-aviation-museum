@@ -11,7 +11,119 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
-    </style>
+
+    
+        </style> 
+    <style>
+  /* Existing site CSS comes before this block */
+  /* Notice popup styles appended below */
+
+  /* Notice Button */
+  #noticeBtn {
+    position: fixed;
+    bottom: 60px;          /* sits above the tickets button */
+    right: 15px;
+    z-index: 9999;
+    background: linear-gradient(135deg, #007AFF, #34C759, #FF2D55, #5AC8FA);
+    background-size: 600% 600%;
+    animation: pulseColors 10s ease infinite;
+    border: none;
+    border-radius: 100px;
+    padding: 12px 20px;
+    color: #fff;
+    font-size: 14px;
+    font-family: 'Manrope', sans-serif;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    cursor: pointer;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.3;
+  }
+  
+  #noticeBtn:hover {
+    transform: scale(1.05);
+  }
+  
+  @keyframes pulseColors {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* Popup Overlay */
+  #noticePopup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(10px);
+    z-index: 9998;
+  }
+
+  /* Popup Content */
+  #noticeContent {
+    max-width: 500px;
+    margin: 10vh auto;
+    background: #fff;
+    border-radius: 16px;
+    padding: 24px;
+    font-family: 'Manrope', sans-serif;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    position: relative;
+    color: #111;
+  }
+
+  #noticeContent h2 {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  #noticeContent p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+
+  #noticeContent a {
+    color: #007AFF;
+    text-decoration: none;
+  }
+
+  #noticeContent a:hover {
+    text-decoration: underline;
+  }
+
+  #closeNotice {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 18px;
+    cursor: pointer;
+    color: #666;
+  }
+
+  #closeNotice:hover {
+    color: #000;
+  }
+
+  /* Adjust both buttons to always show on mobile */
+  @media (max-width: 768px) {
+    .btn {                          /* Buy Tickets button */
+      position: absolute;
+      bottom: 0;
+      left: 15px;
+      z-index: 10000;
+    }
+
+    #noticeBtn {                    /* Notice button */
+      position: absolute;
+      bottom: 60px;
+      right: 15px;
+      width: 150px;
+    }
+  }
+</style>
+ 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="HomePage-index.css" />
