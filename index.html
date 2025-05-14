@@ -295,6 +295,17 @@
             <p>Copyright &copy; 2024 @DTS CORP</p>
         </div>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const noticeBtn = document.getElementById('noticeBtn');
+          const noticePopup = document.getElementById('noticePopup');
+          const closeNotice = document.getElementById('closeNotice');
+      
+          noticeBtn.addEventListener('click', () => noticePopup.style.display = 'block');
+          closeNotice.addEventListener('click', () => noticePopup.style.display = 'none');
+        });
+      </script>
+      
 
 </body>
 </html>
