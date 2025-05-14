@@ -21,6 +21,24 @@ function goNext() {
         document.slide.src = images[i];
     }
 }
+window.onload = function () {
+    loadImg();
+
+    const noticeBtn = document.getElementById("noticeBtn");
+    const noticePopup = document.getElementById("noticePopup");
+    const closeNotice = document.getElementById("closeNotice");
+
+    if (noticeBtn && noticePopup && closeNotice) {
+        noticeBtn.addEventListener("click", () => {
+            noticePopup.style.display = "block";
+        });
+
+        closeNotice.addEventListener("click", () => {
+            noticePopup.style.display = "none";
+        });
+    }
+};
+
 
 function goPrev() {
     if (i > 0) {
@@ -58,3 +76,22 @@ document.addEventListener('scroll', () => {
 });
 
 window.onload = loadImg;
+// — keep all your existing code above —
+// e.g. loadImg, scroll listeners, window.onload = loadImg, etc.
+
+// 1) Listen for DOM ready
+document.addEventListener('DOMContentLoaded', function() {
+    const noticeBtn   = document.getElementById('noticeBtn');
+    const noticePopup = document.getElementById('noticePopup');
+    const closeNotice = document.getElementById('closeNotice');
+  
+    if (noticeBtn && noticePopup && closeNotice) {
+      noticeBtn.addEventListener('click', () => {
+        noticePopup.style.display = 'block';
+      });
+      closeNotice.addEventListener('click', () => {
+        noticePopup.style.display = 'none';
+      });
+    }
+  });
+  
